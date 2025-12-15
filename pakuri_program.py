@@ -3,11 +3,16 @@ from pakudex import Pakudex
 
 print("Welcome to Pakudex: Tracker Extraordinaire!")
 user_input = input("Enter max capacity of the Pakudex: ")
-
-if user_input.isdigit():
-    pakudex = Pakudex(int(user_input))
-else:
-    pakudex = Pakudex()
+work = True
+while(work):
+    if user_input.isdigit():
+        if (int(user_input) > 0):
+            pakudex = Pakudex(int(user_input))
+            work = False
+        else:
+            user_input = input("Please enter a valid size.")
+    else:
+        user_input = input("Please enter a valid size.")
     
 print(f"The Pakudex can hold {pakudex.get_capacity()} species of Pakuri.")
 
