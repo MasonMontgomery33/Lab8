@@ -2,7 +2,13 @@ from pakuri import Pakuri
 from pakudex import Pakudex
 
 print("Welcome to Pakudex: Tracker Extraordinaire!")
-pakudex = Pakudex(int(input("Enter max capacity of the Pakudex: ")))
+user_input = input("Enter max capacity of the Pakudex: ")
+
+if user_input.isdigit():
+    pakudex = Pakudex(int(user_input))
+else:
+    pakudex = Pakudex()
+    
 print(f"The Pakudex can hold {pakudex.get_capacity()} species of Pakuri.")
 
 inp = ""
