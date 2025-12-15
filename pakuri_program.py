@@ -62,7 +62,9 @@ Speed: {p.get_speed()}""")
     elif(inp == "5"):
         pakudex.sort_pakuri()
         print("Pakuri have been sorted!")
+    elif(inp == "6"):
+        break
     else:
-        print("The Pakudex can hold 25 species of Pakuri")
+        print("Unrecognized menu selection!")
 
 print("Thanks for using Pakudex! Bye!")
