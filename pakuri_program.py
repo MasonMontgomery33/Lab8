@@ -10,8 +10,10 @@ while(work):
             pakudex = Pakudex(int(user_input))
             work = False
         else:
+            print("Enter max capacity of the Pakudex: ")
             user_input = input("Please enter a valid size.")
     else:
+        print("Enter max capacity of the Pakudex: ")
         user_input = input("Please enter a valid size.")
     
 print(f"The Pakudex can hold {pakudex.get_capacity()} species of Pakuri.")
